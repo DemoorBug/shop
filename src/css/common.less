@@ -1,0 +1,144 @@
+@import "./var.less";
+
+/////////////////////
+// 所有文件公用样式 //
+////////////////////
+html {
+  // font-size: 100%;
+  /*网页默认大小16px   10/16*100%  = 62.5%  也就是网页字体大小设置为10px */
+  // color: #222;
+  font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+  // font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
+}
+
+fieldset, img {
+    border: 0;
+}
+input {
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+/* 
+网页整体宽度，非响应式 
+*/
+.comWidth {
+  width: @comWidth;
+  margin: 0 auto;
+}
+
+::selection {
+  background-color: @selection;
+  /* 此属性为 选中设置 */
+  text-shadow: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: @a-common;
+}
+
+a:hover {
+  // background-color: none;
+}
+
+a:hover,
+a:active {
+  color: @a-hover;
+  // background-color: #FFF;
+  text-decoration: none;
+}
+
+/* ul,
+dd,
+dl,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+i,
+em {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+button,
+input {
+  outline: 0px;
+  border: 0;
+}
+img {
+  border: none;
+} */
+/*==========
+ 工具样式
+ ==========*/
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+  /*占据位置，隐藏*/
+}
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background: transparent;
+  border: 0;
+}
+
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix:before {
+  content: "";
+  display: table;
+}
