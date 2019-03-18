@@ -188,18 +188,52 @@
 }
 /* 轮播 */
 .slider-banner {
-  background: #e8e8e8;
+  // background: #e8e8e8;
   position: relative;
   opacity: 1;
   transition: background 400ms linear 0s;
   .sc-n {
     height: 500px;
+    position: relative;
   }
   .sc-s {
     height: 500px;
-    overflow: hidden;
+    // overflow: hidden;
+    position: relative;
+    width: 1230px;
+    margin: 0 auto;
+    // left: 0;
+    // top: 0;
+
+    .slider-left {
+      position: absolute;
+      width: 100%;
+      height: 500px;
+      left: -50%;
+      top: 0;
+      z-index: 0
+    }
+    .slider-right {
+      position: absolute;
+      width: 100%;
+      height: 500px;
+      right: 50%;
+      top: 0;
+      z-index: 0
+    }
+    .sc-po {
+      height: 500px;
+      display: block;
+      overflow: hidden;
+      z-index: 2;
+      position: relative;
+    }
   }
   .slider {
+    .slider-ls {
+      position: absolute;
+      width: 100%;
+    }
     img {
       width: 1230px;
     }
@@ -210,6 +244,19 @@
     width: 300px;
     left: 50%;
     margin-left: -150px;
+    z-index: 999;
+    text-align: center;
+    div {
+      height: 5px;
+      width: 20px;
+      display: inline-block;
+      margin-left: 5px;
+      cursor: pointer;
+      background: rgba(0,0,0,.55);
+    }
+    .active {
+      background: rgba(255,255,255,.55);
+    }
     .slick-dots li button:before {
       content: "";
       background-color: black;
@@ -257,7 +304,7 @@
   z-index: 9999;
   height: 500px;
   background: #fff;
-  background: rgba(255,255,255,.55);
+  background: #FAFAFA;
   width: 800px;
   .nav-com-l {
     padding: 20px 30px;
@@ -266,9 +313,9 @@
     width: 580px;
   }
   .nav-lfs {
-    width: 60px;
+    width: 80px;
     font-weight: bold;
-    margin-right: 30px;
+    margin-right: 10px;
   }
   .nav-ri {
     width: 430px;
@@ -294,8 +341,22 @@
 }
 .nav-com-r {
   margin: 10px;
-  background: #fff;
+  // background: #fff;
   height: 480px;
   width: 200px;
+  .nav-r-list {
+    a {
+      float: left;
+      height: 52px;
+      margin-right: 1px;
+      margin-bottom: 1px;
+      padding: 10px 14.5px;
+      background: #fff;
+      width: 99px;
+      img {
+        width: 70px;
+      }
+    }
+  }
 }
 // 结束列表
