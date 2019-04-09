@@ -24,11 +24,11 @@ input:focus,
 button:focus {
   outline: none;
 }
-/* 
-网页整体宽度，非响应式 
+/*
+网页整体宽度，非响应式
 */
-.comWidth {
-  width: @comWidth;
+.container {
+  width: @container;
   margin: 0 auto;
 }
 
@@ -38,14 +38,23 @@ button:focus {
   text-shadow: none;
 }
 
+.link {
+  color: #222
+}
+.link:hover {
+  color: #ff0036
+}
+.transition {
+  transition: .3s all;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
-  color: @a-common;
+  color: #000;
 }
 
 a:hover {
-  // background-color: none;
 }
 
 a:hover,
@@ -86,11 +95,11 @@ img {
   margin-left: auto;
 }
 
-.pull-right {
+.fr {
   float: right !important;
 }
 
-.pull-left {
+.fl {
   float: left !important;
 }
 

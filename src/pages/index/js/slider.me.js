@@ -61,7 +61,7 @@ $(function($, window, document, undefined) {
       controlItem.mouseover(function() {
         stop();
         var index = $(this).index();
-
+        
         play(index, options.mode);
       }).mouseout(function() {
         isAuto && autoPlay();
