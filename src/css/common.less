@@ -11,6 +11,10 @@ html {
   // font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
 }
 
+body, button, input, select, textarea {
+    font-family: '\5FAE\8F6F\96C5\9ED1',arial,"\5b8b\4f53"
+}
+
 fieldset, img {
     border: 0;
 }
@@ -31,7 +35,10 @@ button:focus {
   width: @container;
   margin: 0 auto;
 }
-
+.fadeOut {
+  opacity: 0;
+  visibility: visible;
+}
 ::selection {
   background-color: @selection;
   /* 此属性为 选中设置 */
@@ -46,6 +53,19 @@ button:focus {
 }
 .transition {
   transition: .3s all;
+}
+/* 文字隐藏 */
+.text-hidden {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+/* 显示省略号 */
+.text-ellipsis {
+  /* 显示省略号 */
+  text-overflow: ellipsis;
+  /* 不换号 */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 a {

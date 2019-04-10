@@ -58,7 +58,7 @@ module.exports = merge(common, {
     new PurgecssPlugin({
       paths: glob.sync(`${PATHS.src}/pages/*/*`,  { nodir: true }),
       //白名单css，正则匹配css
-      whitelistPatterns: [/^(slick)/]
+      whitelistPatterns: [/active/,/fadeOut/]
     }),
   ]
 });
